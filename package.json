@@ -1,0 +1,56 @@
+{
+  "name": "react-ai-orb",
+  "version": "1.0.0",
+  "description": "Animated orb React component",
+  "main": "dist/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steve0929/react-ai-orb.git"
+  },
+  "keywords": [
+    "orb",
+    "ai",
+    "ai",
+    "orb",
+    "3d",
+    "orb",
+    "sphere",
+    "siri"
+  ],
+  "author": "github.com/Steve0929",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steve0929/react-ai-orb/issues"
+  },
+  "homepage": "https://github.com/Steve0929/react-ai-orb#readme",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.0.7",
+    "babel-loader": "^9.2.1",
+    "rollup": "^2.79.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.8.1"
+  }
+}
