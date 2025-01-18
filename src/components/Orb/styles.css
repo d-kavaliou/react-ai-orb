@@ -1,6 +1,12 @@
+/*
 :root {
   --main-bg-start: rgb(236, 133, 255);
   --main-bg-end: rgb(49, 138, 255);
+
+  --shadow-color-1: rgba(166, 35, 248, 0);
+  --shadow-color-2: rgba(121, 19, 255, 0.5);
+  --shadow-color-3: rgba(255, 255, 255, 0.9);
+  --shadow-color-4: rgb(253, 164, 250);
 
   --shape-a-start: rgb(133, 210, 255);
   --shape-a-end: rgba(115, 49, 255, 0);
@@ -17,9 +23,10 @@
   --shape-d-middle: rgba(142, 111, 255, 0);
   --shape-d-end: #00eeff;
 
-  --animation-speed-rotate: 2s;
-  --animation-speed-hue: 2s;
+  --animation-rotation-speed-base: 2s;
+  --animation-hue-speed-base: 2s;
 }
+*/
 
 .orb-main {
   cursor: pointer;
@@ -34,10 +41,10 @@
     var(--main-bg-end) 70%
   );
 
-  box-shadow: rgba(166, 35, 248, 0) 0px 4px 6px 0px,
-    rgba(121, 19, 255, 0.5) 0px 5px 10px 0px,
-    rgba(255, 255, 255, 0.9) 0px 0px 1px 0px inset,
-    rgb(253, 164, 250) 0px 1px 7px 0px inset;
+  box-shadow: var(--shadow-color-1) 0px 4px 6px 0px,
+    var(--shadow-color-2) 0px 5px 10px 0px,
+    var(--shadow-color-3) 0px 0px 1px 0px inset,
+    var(--shadow-color-4) 0px 1px 7px 0px inset;
 }
 
 /* Shape Locations */
@@ -81,7 +88,8 @@
   );
   transform-style: preserve-3d;
   /* Animation */
-  animation: rotateDiagonal 2s linear infinite, hueShift 2s linear infinite;
+  animation: rotateDiagonal var(--animation-rotation-speed-base) linear infinite,
+    hueShift var(--animation-hue-speed-base) linear infinite;
 }
 
 .shape-b {
@@ -99,7 +107,13 @@
   will-change: transform;
   transform-style: preserve-3d;
   /* Animation */
-  animation: circleAnimation 3s linear infinite, hueShift 3s linear infinite;
+  animation: rotateDiagonal
+      calc(
+        var(--animation-rotation-speed-base) +
+          var(--animation-rotation-speed-base) * 0.5
+      )
+      linear infinite,
+    hueShift calc(var(--animation-hue-speed-base) + 1s) linear infinite;
   mix-blend-mode: soft-light;
 }
 
@@ -115,10 +129,15 @@
   );
   filter: blur(1px);
   opacity: 0.65;
-
   transform-style: preserve-3d;
   /* Animation */
-  animation: rotateDiagonal 4s linear infinite, hueShift 4s linear infinite;
+  animation: rotateDiagonal
+      calc(
+        var(--animation-rotation-speed-base) +
+          var(--animation-rotation-speed-base) * 1
+      )
+      linear infinite,
+    hueShift calc(var(--animation-hue-speed-base) + 2s) linear infinite;
   mix-blend-mode: color-dodge;
 }
 
@@ -136,7 +155,13 @@
   opacity: 0.55;
 
   transform-style: preserve-3d;
-  animation: rotateDiagonal 5s linear infinite, hueShift 5s linear infinite;
+  animation: rotateDiagonal
+      calc(
+        var(--animation-rotation-speed-base) +
+          var(--animation-rotation-speed-base) * 1.5
+      )
+      linear infinite,
+    hueShift calc(var(--animation-hue-speed-base) + 3s) linear infinite;
   mix-blend-mode: color;
 }
 
@@ -151,7 +176,13 @@
 }
 
 .blob-a {
-  animation: rotateDiagonal 6s linear infinite, hueShift 6s linear infinite;
+  animation: rotateDiagonal
+      calc(
+        var(--animation-rotation-speed-base) +
+          var(--animation-rotation-speed-base) * 2
+      )
+      linear infinite,
+    hueShift calc(var(--animation-hue-speed-base) + 4s) linear infinite;
   opacity: 0.3;
   mix-blend-mode: screen;
 }
@@ -159,9 +190,15 @@
 .blob-b {
   position: absolute;
   top: 0;
-  mix-blend-mode: lighten;
-  animation: rotateDiagonal 7s linear infinite, hueShift 7s linear infinite;
   opacity: 0.8;
+  mix-blend-mode: lighten;
+  animation: rotateDiagonal
+      calc(
+        var(--animation-rotation-speed-base) +
+          var(--animation-rotation-speed-base) * 2.5
+      )
+      linear infinite,
+    hueShift calc(var(--animation-hue-speed-base) + 5s) linear infinite;
 }
 
 .blob-shine {

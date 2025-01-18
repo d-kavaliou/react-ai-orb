@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./styles.css";
 
 export interface OrbProps {
@@ -125,9 +125,80 @@ const SvgElements = () => {
   );
 };
 
-export const Orb = () => {
+export const Orb = ({
+  size = 300,
+  mainBgStart = "rgb(236, 133, 255)",
+  mainBgEnd = "rgb(49, 138, 255)",
+  shadowColor1 = "rgba(166, 35, 248, 0)",
+  shadowColor2 = "rgba(121, 19, 255, 0.5)",
+  shadowColor3 = "rgba(255, 255, 255, 0.9)",
+  shadowColor4 = "rgb(253, 164, 250)",
+  shapeAStart = "rgb(133, 210, 255)",
+  shapeAEnd = "rgba(115, 49, 255, 0)",
+  shapeBStart = "rgb(254, 245, 254)",
+  shapeBMiddle = "rgb(253, 109, 255)",
+  shapeBEnd = "rgba(203, 56, 255, 0)",
+  shapeCStart = "rgba(254, 254, 254, 0)",
+  shapeCMiddle = "rgba(254, 111, 255, 0)",
+  shapeCEnd = "#7006fe",
+  shapeDStart = "rgba(254, 254, 254, 0)",
+  shapeDMiddle = "rgba(142, 111, 255, 0)",
+  shapeDEnd = "#00eeff",
+  animationSpeedBase = 2,
+  animationSpeedHue = 2,
+}) => {
+  const cssVariables = useMemo(
+    () =>
+      ({
+        "--main-bg-start": mainBgStart,
+        "--main-bg-end": mainBgEnd,
+        "--shadow-color-1": shadowColor1,
+        "--shadow-color-2": shadowColor2,
+        "--shadow-color-3": shadowColor3,
+        "--shadow-color-4": shadowColor4,
+        "--shape-a-start": shapeAStart,
+        "--shape-a-end": shapeAEnd,
+        "--shape-b-start": shapeBStart,
+        "--shape-b-middle": shapeBMiddle,
+        "--shape-b-end": shapeBEnd,
+        "--shape-c-start": shapeCStart,
+        "--shape-c-middle": shapeCMiddle,
+        "--shape-c-end": shapeCEnd,
+        "--shape-d-start": shapeDStart,
+        "--shape-d-middle": shapeDMiddle,
+        "--shape-d-end": shapeDEnd,
+        "--animation-rotation-speed-base": `${animationSpeedBase}s`,
+        "--animation-hue-speed-base": `${animationSpeedHue}s`,
+      } as React.CSSProperties),
+    [
+      mainBgStart,
+      mainBgEnd,
+      shadowColor1,
+      shadowColor2,
+      shadowColor3,
+      shadowColor4,
+      shapeAStart,
+      shapeAEnd,
+      shapeBStart,
+      shapeBMiddle,
+      shapeBEnd,
+      shapeCStart,
+      shapeCMiddle,
+      shapeCEnd,
+      shapeDStart,
+      shapeDMiddle,
+      shapeDEnd,
+      animationSpeedBase,
+      animationSpeedHue,
+    ]
+  );
+
   return (
-    <>
+    <div
+      style={{
+        ...cssVariables,
+      }}
+    >
       <div className="orb-main">
         <div className="glass loc-glass" />
         <div className="shape-a loc-a" />
@@ -141,7 +212,7 @@ export const Orb = () => {
         <canvas ref={canvasRef} className="absolute inset-0 mix-blend-screen" />
         */}
       </div>
-    </>
+    </div>
   );
 };
 
