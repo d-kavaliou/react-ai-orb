@@ -113,7 +113,11 @@
           var(--animation-rotation-speed-base) * 0.5
       )
       linear infinite,
-    hueShift calc(var(--animation-hue-speed-base) + 1s) linear infinite;
+    hueShift
+      calc(
+        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 0.5
+      )
+      linear infinite;
   mix-blend-mode: soft-light;
 }
 
@@ -137,7 +141,11 @@
           var(--animation-rotation-speed-base) * 1
       )
       linear infinite,
-    hueShift calc(var(--animation-hue-speed-base) + 2s) linear infinite;
+    hueShift
+      calc(
+        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 1
+      )
+      linear infinite;
   mix-blend-mode: color-dodge;
 }
 
@@ -161,7 +169,11 @@
           var(--animation-rotation-speed-base) * 1.5
       )
       linear infinite,
-    hueShift calc(var(--animation-hue-speed-base) + 3s) linear infinite;
+    hueShift
+      calc(
+        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 1.5
+      )
+      linear infinite;
   mix-blend-mode: color;
 }
 
@@ -182,7 +194,11 @@
           var(--animation-rotation-speed-base) * 2
       )
       linear infinite,
-    hueShift calc(var(--animation-hue-speed-base) + 4s) linear infinite;
+    hueShift
+      calc(
+        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 2
+      )
+      linear infinite;
   opacity: 0.3;
   mix-blend-mode: screen;
 }
@@ -198,7 +214,11 @@
           var(--animation-rotation-speed-base) * 2.5
       )
       linear infinite,
-    hueShift calc(var(--animation-hue-speed-base) + 5s) linear infinite;
+    hueShift
+      calc(
+        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 2.5
+      )
+      linear infinite;
 }
 
 .blob-shine {

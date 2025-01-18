@@ -144,8 +144,8 @@ export const Orb = ({
   shapeDStart = "rgba(254, 254, 254, 0)",
   shapeDMiddle = "rgba(142, 111, 255, 0)",
   shapeDEnd = "#00eeff",
-  animationSpeedBase = 2,
-  animationSpeedHue = 2,
+  animationSpeedBase = 1,
+  animationSpeedHue = 1,
 }) => {
   const cssVariables = useMemo(
     () =>
@@ -167,8 +167,8 @@ export const Orb = ({
         "--shape-d-start": shapeDStart,
         "--shape-d-middle": shapeDMiddle,
         "--shape-d-end": shapeDEnd,
-        "--animation-rotation-speed-base": `${animationSpeedBase}s`,
-        "--animation-hue-speed-base": `${animationSpeedHue}s`,
+        "--animation-rotation-speed-base": `${1 / (animationSpeedBase * 0.5)}s`,
+        "--animation-hue-speed-base": `${1 / (animationSpeedHue * 0.5)}s`,
       } as React.CSSProperties),
     [
       mainBgStart,
