@@ -6,5 +6,5 @@ export interface OrbProps {
     /** Primary color of the orb gradient */
     color: string;
 }
-declare const Orb: ({ size, color }: OrbProps) => React.JSX.Element;
+export declare const Orb: () => React.JSX.Element;
 export default Orb;
