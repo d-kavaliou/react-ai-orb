@@ -1,3 +1,26 @@
+:root {
+  --main-bg-start: rgb(236, 133, 255);
+  --main-bg-end: rgb(49, 138, 255);
+
+  --shape-a-start: rgb(133, 210, 255);
+  --shape-a-end: rgba(115, 49, 255, 0);
+
+  --shape-b-start: rgb(254, 245, 254);
+  --shape-b-middle: rgb(253, 109, 255);
+  --shape-b-end: rgba(203, 56, 255, 0);
+
+  --shape-c-start: rgba(254, 254, 254, 0);
+  --shape-c-middle: rgba(254, 111, 255, 0);
+  --shape-c-end: #7006fe;
+
+  --shape-d-start: rgba(254, 254, 254, 0);
+  --shape-d-middle: rgba(142, 111, 255, 0);
+  --shape-d-end: #00eeff;
+
+  --animation-speed-rotate: 2s;
+  --animation-speed-hue: 2s;
+}
+
 .orb-main {
   cursor: pointer;
   position: relative;
@@ -7,9 +30,10 @@
   border-radius: 50%;
   background-image: radial-gradient(
     circle at 50% 30%,
-    rgb(236, 133, 255) 0%,
-    rgb(49, 138, 255) 70%
+    var(--main-bg-start) 0%,
+    var(--main-bg-end) 70%
   );
+
   box-shadow: rgba(166, 35, 248, 0) 0px 4px 6px 0px,
     rgba(121, 19, 255, 0.5) 0px 5px 10px 0px,
     rgba(255, 255, 255, 0.9) 0px 0px 1px 0px inset,
@@ -52,8 +76,8 @@
   width: 72px;
   background-image: radial-gradient(
     circle at 50% 90%,
-    rgb(133, 210, 255) 0%,
-    rgba(115, 49, 255, 0) 70%
+    var(--shape-a-start) 0%,
+    var(--shape-a-end) 70%
   );
   transform-style: preserve-3d;
   /* Animation */
@@ -67,9 +91,9 @@
   border-radius: 50%;
   background: radial-gradient(
     circle at 33% 12%,
-    rgb(254, 245, 254) 0%,
-    rgb(253, 109, 255) 26%,
-    rgba(203, 56, 255, 0) 63%
+    var(--shape-b-start) 0%,
+    var(--shape-b-middle) 26%,
+    var(--shape-b-end) 63%
   );
   filter: blur(2px);
   will-change: transform;
@@ -85,9 +109,9 @@
   border-radius: 50%;
   background-image: radial-gradient(
     circle at 31% 12%,
-    rgba(254, 254, 254, 0) 0%,
-    rgba(254, 111, 255, 0) 31%,
-    #7006fe 77%
+    var(--shape-c-start) 0%,
+    var(--shape-c-middle) 31%,
+    var(--shape-c-end) 77%
   );
   filter: blur(1px);
   opacity: 0.65;
@@ -104,9 +128,9 @@
   border-radius: 50%;
   background-image: radial-gradient(
     circle at 12% 80%,
-    rgba(254, 254, 254, 0) 0%,
-    rgba(142, 111, 255, 0) 31%,
-    #00eeff 77%
+    var(--shape-d-start) 0%,
+    var(--shape-d-middle) 31%,
+    var(--shape-d-end) 77%
   );
   filter: blur(1px);
   opacity: 0.55;

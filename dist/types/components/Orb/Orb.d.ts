@@ -5,6 +5,8 @@ export interface OrbProps {
     size?: number;
     /** Primary color of the orb gradient */
     color: string;
+    /** Shining effect in the middle of the orb */
+    shineMiddle?: boolean;
 }
 export declare const Orb: () => React.JSX.Element;
 export default Orb;
