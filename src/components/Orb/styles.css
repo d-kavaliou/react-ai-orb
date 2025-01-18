@@ -297,3 +297,13 @@
     transform: rotate(-120deg);
   }
 }
+
+/* Dummy animation keyframe (to trigger a reset) */
+@keyframes resetAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}

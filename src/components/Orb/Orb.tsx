@@ -146,6 +146,7 @@ export const Orb = ({
   shapeDEnd = "#00eeff",
   animationSpeedBase = 1,
   animationSpeedHue = 1,
+  mainOrbHueAnimation = false,
 }) => {
   const cssVariables = useMemo(
     () =>
@@ -169,6 +170,9 @@ export const Orb = ({
         "--shape-d-end": shapeDEnd,
         "--animation-rotation-speed-base": `${1 / (animationSpeedBase * 0.5)}s`,
         "--animation-hue-speed-base": `${1 / (animationSpeedHue * 0.5)}s`,
+        "--main-hue-animation": mainOrbHueAnimation
+          ? "hueShift var(--animation-hue-speed-base) linear infinite"
+          : "none",
       } as React.CSSProperties),
     [
       mainBgStart,
@@ -193,13 +197,26 @@ export const Orb = ({
     ]
   );
 
+  const mainOrbHueAnimationStyle = useMemo(
+    () =>
+      mainOrbHueAnimation
+        ? "hueShift var(--animation-hue-speed-base) linear infinite"
+        : "none",
+    [mainOrbHueAnimation]
+  );
+
   return (
     <div
       style={{
         ...cssVariables,
       }}
     >
-      <div className="orb-main">
+      <div
+        className="orb-main"
+        style={{
+          animation: mainOrbHueAnimationStyle,
+        }}
+      >
         <div className="glass loc-glass" />
         <div className="shape-a loc-a" />
         <div className="shape-b loc-b" />
