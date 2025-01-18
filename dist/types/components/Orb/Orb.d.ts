@@ -8,8 +8,7 @@ export interface OrbProps {
     /** Shining effect in the middle of the orb */
     shineMiddle?: boolean;
 }
-export declare const Orb: ({ size, mainBgStart, mainBgEnd, shadowColor1, shadowColor2, shadowColor3, shadowColor4, shapeAStart, shapeAEnd, shapeBStart, shapeBMiddle, shapeBEnd, shapeCStart, shapeCMiddle, shapeCEnd, shapeDStart, shapeDMiddle, shapeDEnd, animationSpeedBase, animationSpeedHue, mainOrbHueAnimation, }: {
-    size?: number | undefined;
+export declare const Orb: ({ mainBgStart, mainBgEnd, shadowColor1, shadowColor2, shadowColor3, shadowColor4, shapeAStart, shapeAEnd, shapeBStart, shapeBMiddle, shapeBEnd, shapeCStart, shapeCMiddle, shapeCEnd, shapeDStart, shapeDMiddle, shapeDEnd, size, animationSpeedBase, animationSpeedHue, hueRotation, mainOrbHueAnimation, }: {
     mainBgStart?: string | undefined;
     mainBgEnd?: string | undefined;
     shadowColor1?: string | undefined;
@@ -27,8 +26,10 @@ export declare const Orb: ({ size, mainBgStart, mainBgEnd, shadowColor1, shadowC
     shapeDStart?: string | undefined;
     shapeDMiddle?: string | undefined;
     shapeDEnd?: string | undefined;
+    size?: number | undefined;
     animationSpeedBase?: number | undefined;
     animationSpeedHue?: number | undefined;
+    hueRotation?: number | undefined;
     mainOrbHueAnimation?: boolean | undefined;
 }) => React.JSX.Element;
 export default Orb;

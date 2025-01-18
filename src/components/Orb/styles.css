@@ -32,8 +32,8 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 82px;
-  width: 82px;
+  height: var(--react-ai-orb-size);
+  width: var(--react-ai-orb-size);
   border-radius: 50%;
   background-image: radial-gradient(
     circle at 50% 30%,
@@ -45,6 +45,8 @@
     var(--shadow-color-2) 0px 5px 10px 0px,
     var(--shadow-color-3) 0px 0px 1px 0px inset,
     var(--shadow-color-4) 0px 1px 7px 0px inset;
+
+  animation: var(--main-hue-animation);
 }
 
 /* Shape Locations */
@@ -278,7 +280,7 @@
     filter: hue-rotate(0deg);
   }
   50% {
-    filter: hue-rotate(120deg);
+    filter: hue-rotate(var(--hue-rotation));
   }
   100% {
     filter: hue-rotate(0deg);
