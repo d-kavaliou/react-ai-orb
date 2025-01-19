@@ -1,0 +1,23 @@
+export type OrbPalette = {
+    mainBgStart: string;
+    mainBgEnd: string;
+    shadowColor1: string;
+    shadowColor2: string;
+    shadowColor3: string;
+    shadowColor4: string;
+    shapeAStart: string;
+    shapeAEnd: string;
+    shapeBStart: string;
+    shapeBMiddle: string;
+    shapeBEnd: string;
+    shapeCStart: string;
+    shapeCMiddle: string;
+    shapeCEnd: string;
+    shapeDStart: string;
+    shapeDMiddle: string;
+    shapeDEnd: string;
+};
+export type PaletteNames = "cosmicNebula" | "sunsetGlow" | "oceanDepths" | "northernLights" | "cherryBlossom";
+export type OrbPalettes = {
+    [K in PaletteNames]: OrbPalette;
+};
