@@ -27,7 +27,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".orb-main{animation:var(--main-hue-animation);background-image:radial-gradient(circle at 50% 30%,var(--main-bg-start) 0,var(--main-bg-end) 70%);border-radius:50%;box-shadow:var(--shadow-color-1) 0 4px 6px 0,var(--shadow-color-2) 0 5px 10px 0,var(--shadow-color-3) 0 0 1px 0 inset,var(--shadow-color-4) 0 1px 7px 0 inset;cursor:pointer;height:var(--react-ai-orb-size);overflow:hidden;position:relative;width:var(--react-ai-orb-size)}.loc-a{position:absolute}.loc-b{left:10%}.loc-b,.loc-c{position:absolute;top:5%}.loc-c,.loc-d{left:5%}.loc-d{position:absolute;top:5%}.loc-glass{left:7%;position:absolute;top:6%}.shape-a{animation:rotateDiagonal var(--animation-rotation-speed-base) linear infinite,hueShift var(--animation-hue-speed-base) linear infinite;background-image:radial-gradient(circle at 50% 90%,var(--shape-a-start) 0,var(--shape-a-end) 70%)}.shape-a,.shape-b{border-radius:50%;height:var(--shapes-size);transform-style:preserve-3d;width:var(--shapes-size)}.shape-b{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*.5) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*.5) linear infinite;background:radial-gradient(circle at 33% 12%,var(--shape-b-start) 0,var(--shape-b-middle) 26%,var(--shape-b-end) 63%);filter:blur(2px);mix-blend-mode:soft-light;will-change:transform}.shape-c{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*1) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*1) linear infinite;background-image:radial-gradient(circle at 31% 12%,var(--shape-c-start) 0,var(--shape-c-middle) 31%,var(--shape-c-end) 77%);mix-blend-mode:color-dodge;opacity:.65}.shape-c,.shape-d{border-radius:50%;filter:blur(1px);height:var(--shapes-size);transform-style:preserve-3d;width:var(--shapes-size)}.shape-d{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*1.5) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*1.5) linear infinite;background-image:radial-gradient(circle at 12% 80%,var(--shape-d-start) 0,var(--shape-d-middle) 31%,var(--shape-d-end) 77%);mix-blend-mode:color;opacity:.55}.glass{background:transparent;border-radius:50%;box-shadow:inset 0 -1px 6px 1px hsla(0,0%,100%,.5),inset 0 3px 4px 0 hsla(0,0%,100%,.5);height:var(--shapes-size);opacity:.8;width:var(--shapes-size)}.blob-a{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*2) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*2) linear infinite;mix-blend-mode:screen;opacity:.3}.blob-b{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*2.5) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*2.5) linear infinite;mix-blend-mode:lighten;opacity:.8}.blob-b,.blob-shine{position:absolute;top:0}.blob-shine{fill:#fff;animation:expand 3.5s linear infinite;filter:blur(15px);mix-blend-mode:hard-light;opacity:.9;transform:scale(.4)}.shine-b{animation:expand-b 5s ease-in-out infinite;left:15%;mix-blend-mode:plus-lighter;opacity:.3}@keyframes expand{0%{transform:scale(.4)}50%{transform:scale(.1)}to{transform:scale(.4)}}@keyframes expand-b{0%{transform:scale(.6)}50%{transform:scale(.1)}to{transform:scale(.6)}}@keyframes rotateDiagonal{0%{transform:rotate3d(1,1,1,0deg)}to{transform:rotate3d(1,1,1,1turn)}}@keyframes hueShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(var(--hue-rotation))}to{filter:hue-rotate(0deg)}}@keyframes circleAnimation{0%{transform:rotate(-120deg)}50%{transform:rotate(0)}to{transform:rotate(-120deg)}}@keyframes resetAnimation{0%{opacity:1}to{opacity:1}}";
+var css_248z = ".orb-main{animation:var(--main-hue-animation);background-image:radial-gradient(circle at 50% 30%,var(--main-bg-start) 0,var(--main-bg-end) 70%);border-radius:50%;box-shadow:var(--shadow-color-1) 0 4px 6px 0,var(--shadow-color-2) 0 5px 10px 0,var(--shadow-color-3) 0 0 1px 0 inset,var(--shadow-color-4) 0 1px 7px 0 inset;cursor:pointer;height:var(--react-ai-orb-size);overflow:hidden;position:relative;width:var(--react-ai-orb-size)}.loc-a{position:absolute}.loc-b{left:10%}.loc-b,.loc-c{position:absolute;top:5%}.loc-c,.loc-d{left:5%}.loc-d{position:absolute;top:5%}.loc-glass{left:7%;position:absolute;top:6%}.shape-a{animation:rotateDiagonal var(--animation-rotation-speed-base) linear infinite,hueShift var(--animation-hue-speed-base) linear infinite;background-image:radial-gradient(circle at 50% 90%,var(--shape-a-start) 0,var(--shape-a-end) 70%)}.shape-a,.shape-b{border-radius:50%;height:var(--shapes-size);transform-style:preserve-3d;width:var(--shapes-size)}.shape-b{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*.5) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*.5) linear infinite;background:radial-gradient(circle at 33% 12%,var(--shape-b-start) 0,var(--shape-b-middle) 26%,var(--shape-b-end) 63%);filter:blur(2px);mix-blend-mode:soft-light;will-change:transform}.shape-c{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*1) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*1) linear infinite;background-image:radial-gradient(circle at 31% 12%,var(--shape-c-start) 0,var(--shape-c-middle) 31%,var(--shape-c-end) 77%);mix-blend-mode:color-dodge;opacity:.65}.shape-c,.shape-d{border-radius:50%;filter:blur(1px);height:var(--shapes-size);transform-style:preserve-3d;width:var(--shapes-size)}.shape-d{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*1.5) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*1.5) linear infinite;background-image:radial-gradient(circle at 12% 80%,var(--shape-d-start) 0,var(--shape-d-middle) 31%,var(--shape-d-end) 77%);mix-blend-mode:color;opacity:.55}.glass{background:transparent;border-radius:50%;box-shadow:inset 0 -1px 6px 1px hsla(0,0%,100%,.5),inset 0 3px 4px 0 hsla(0,0%,100%,.5);height:var(--shapes-size);opacity:.8;width:var(--shapes-size)}.blob-a{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*2) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*2) linear infinite;mix-blend-mode:screen;opacity:var(--blob-a-opacity)}.blob-b{animation:rotateDiagonal calc(var(--animation-rotation-speed-base) + var(--animation-rotation-speed-base)*2.5) linear infinite,hueShift calc(var(--animation-hue-speed-base) + var(--animation-hue-speed-base)*2.5) linear infinite;mix-blend-mode:lighten;opacity:var(--blob-b-opacity)}.blob-b,.blob-shine{position:absolute;top:0}.blob-shine{fill:#fff;animation:expand 3.5s linear infinite;filter:blur(15px);mix-blend-mode:hard-light;opacity:.9;transform:scale(.4)}.shine-b{animation:expand-b 5s ease-in-out infinite;left:15%;mix-blend-mode:plus-lighter;opacity:.3}@keyframes expand{0%{transform:scale(.4)}50%{transform:scale(.1)}to{transform:scale(.4)}}@keyframes expand-b{0%{transform:scale(.6)}50%{transform:scale(.1)}to{transform:scale(.6)}}@keyframes rotateDiagonal{0%{transform:rotate3d(1,1,1,0deg)}to{transform:rotate3d(1,1,1,1turn)}}@keyframes hueShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(var(--hue-rotation))}to{filter:hue-rotate(0deg)}}@keyframes circleAnimation{0%{transform:rotate(-120deg)}50%{transform:rotate(0)}to{transform:rotate(-120deg)}}";
 styleInject(css_248z);
 
 const SvgElements = ({ color1, color2 }) => {
@@ -57,7 +57,6 @@ const SvgElements = ({ color1, color2 }) => {
 };
 
 const colorPalettes = {
-    // Cosmic Nebula - Purple and blue space-like colors
     cosmicNebula: {
         mainBgStart: "rgb(236, 133, 255)",
         mainBgEnd: "rgb(49, 138, 255)",
@@ -77,30 +76,66 @@ const colorPalettes = {
         shapeDMiddle: "rgba(142, 111, 255, 0)",
         shapeDEnd: "#00eeff",
     },
-    // Sunset Glow - Warm sunset colors
-    sunsetGlow: {
-        mainBgStart: "rgb(255, 177, 103)",
-        mainBgEnd: "rgb(255, 64, 129)",
-        shadowColor1: "rgba(255, 138, 0, 0)",
-        shadowColor2: "rgba(255, 87, 51, 0.5)",
-        shadowColor3: "rgba(255, 255, 255, 0.9)",
-        shadowColor4: "rgb(255, 183, 77)",
-        shapeAStart: "rgb(255, 209, 128)",
-        shapeAEnd: "rgba(255, 87, 34, 0)",
-        shapeBStart: "rgb(255, 245, 231)",
-        shapeBMiddle: "rgb(255, 138, 101)",
-        shapeBEnd: "rgba(255, 61, 0, 0)",
-        shapeCStart: "rgba(255, 243, 224, 0)",
-        shapeCMiddle: "rgba(255, 138, 101, 0)",
-        shapeCEnd: "#ff3d00",
-        shapeDStart: "rgba(255, 248, 225, 0)",
-        shapeDMiddle: "rgba(255, 160, 0, 0)",
-        shapeDEnd: "#ff6d00",
-    },
-    // Ocean Depths - Deep sea blues and greens
-    oceanDepths: {
+    caribean: {
         mainBgStart: "rgb(64, 224, 208)",
-        mainBgEnd: "rgb(0, 87, 138)",
+        mainBgEnd: "rgb(76, 189, 255)",
+        shadowColor1: "rgba(8, 226, 255, 0)",
+        shadowColor2: "rgba(43, 173, 216, 0.5)",
+        shadowColor3: "rgba(255, 255, 255, 0.9)",
+        shadowColor4: "rgb(72, 209, 204)",
+        shapeAStart: "rgb(127, 255, 212)",
+        shapeAEnd: "rgba(0, 105, 148, 0)",
+        shapeBStart: "rgb(240, 241, 255)",
+        shapeBMiddle: "rgb(64, 224, 208)",
+        shapeBEnd: "rgba(0, 128, 128, 0)",
+        shapeCStart: "rgba(224, 255, 255, 0)",
+        shapeCMiddle: "rgba(32, 178, 170, 0)",
+        shapeCEnd: "#006064",
+        shapeDStart: "rgba(224, 255, 255, 0)",
+        shapeDMiddle: "rgba(45, 8, 255, 0)",
+        shapeDEnd: "#00838f",
+    },
+    cherryBlossom: {
+        mainBgStart: "rgb(255, 204, 229)",
+        mainBgEnd: "rgb(255, 102, 153)",
+        shadowColor1: "rgba(255, 153, 204, 0)",
+        shadowColor2: "rgba(255, 102, 178, 0.5)",
+        shadowColor3: "rgba(255, 255, 255, 0.9)",
+        shadowColor4: "rgb(255, 183, 197)",
+        shapeAStart: "rgb(255, 228, 240)",
+        shapeAEnd: "rgba(255, 140, 189, 0)",
+        shapeBStart: "rgb(255, 240, 245)",
+        shapeBMiddle: "rgb(255, 105, 180)",
+        shapeBEnd: "rgba(255, 20, 147, 0)",
+        shapeCStart: "rgba(255, 250, 250, 0)",
+        shapeCMiddle: "rgba(255, 182, 193, 0)",
+        shapeCEnd: "#FF69B4",
+        shapeDStart: "rgba(255, 245, 247, 0)",
+        shapeDMiddle: "rgba(255, 92, 143, 0)",
+        shapeDEnd: "#FF1493",
+    },
+    galaxy: {
+        mainBgStart: "rgb(40, 40, 99)",
+        mainBgEnd: "rgb(50, 50, 100)",
+        shadowColor1: "rgba(166, 35, 248, 0)",
+        shadowColor2: "rgba(121, 19, 255, 0.5)",
+        shadowColor3: "rgba(255, 255, 255, 0.9)",
+        shadowColor4: "rgb(253, 164, 250)",
+        shapeAStart: "rgb(133, 210, 255)",
+        shapeAEnd: "rgba(115, 49, 255, 0)",
+        shapeBStart: "rgb(254, 245, 254)",
+        shapeBMiddle: "rgb(253, 109, 255)",
+        shapeBEnd: "rgba(203, 56, 255, 0)",
+        shapeCStart: "rgba(254, 254, 254, 0)",
+        shapeCMiddle: "rgba(254, 111, 255, 0)",
+        shapeCEnd: "#7006fe",
+        shapeDStart: "rgba(254, 254, 254, 0)",
+        shapeDMiddle: "rgba(142, 111, 255, 0)",
+        shapeDEnd: "#00eeff",
+    },
+    oceanDepths: {
+        mainBgStart: "rgb(4, 63, 255)",
+        mainBgEnd: "rgb(17, 19, 82)",
         shadowColor1: "rgba(0, 149, 182, 0)",
         shadowColor2: "rgba(0, 96, 128, 0.5)",
         shadowColor3: "rgba(255, 255, 255, 0.9)",
@@ -117,51 +152,38 @@ const colorPalettes = {
         shapeDMiddle: "rgba(0, 128, 128, 0)",
         shapeDEnd: "#00838f",
     },
-    // Northern Lights - Aurora borealis inspired
-    northernLights: {
-        mainBgStart: "rgb(120, 255, 214)",
-        mainBgEnd: "rgb(0, 108, 92)",
-        shadowColor1: "rgba(16, 185, 129, 0)",
-        shadowColor2: "rgba(6, 182, 212, 0.5)",
-        shadowColor3: "rgba(255, 255, 255, 0.9)",
-        shadowColor4: "rgb(52, 211, 153)",
-        shapeAStart: "rgb(167, 243, 208)",
-        shapeAEnd: "rgba(20, 184, 166, 0)",
-        shapeBStart: "rgb(236, 253, 245)",
-        shapeBMiddle: "rgb(52, 211, 153)",
-        shapeBEnd: "rgba(16, 185, 129, 0)",
-        shapeCStart: "rgba(209, 250, 229, 0)",
-        shapeCMiddle: "rgba(16, 185, 129, 0)",
-        shapeCEnd: "#047857",
-        shapeDStart: "rgba(236, 253, 245, 0)",
-        shapeDMiddle: "rgba(20, 184, 166, 0)",
-        shapeDEnd: "#0d9488",
-    },
-    // Cherry Blossom - Soft pink and white hues
-    cherryBlossom: {
-        mainBgStart: "rgb(253, 242, 248)",
-        mainBgEnd: "rgb(244, 114, 182)",
-        shadowColor1: "rgba(251, 207, 232, 0)",
-        shadowColor2: "rgba(249, 168, 212, 0.5)",
-        shadowColor3: "rgba(255, 255, 255, 0.9)",
-        shadowColor4: "rgb(251, 207, 232)",
-        shapeAStart: "rgb(252, 231, 243)",
-        shapeAEnd: "rgba(244, 114, 182, 0)",
-        shapeBStart: "rgb(253, 242, 248)",
-        shapeBMiddle: "rgb(251, 207, 232)",
-        shapeBEnd: "rgba(236, 72, 153, 0)",
-        shapeCStart: "rgba(253, 242, 248, 0)",
-        shapeCMiddle: "rgba(249, 168, 212, 0)",
-        shapeCEnd: "#be185d",
-        shapeDStart: "rgba(253, 242, 248, 0)",
-        shapeDMiddle: "rgba(244, 114, 182, 0)",
-        shapeDEnd: "#db2777",
+    emerald: {
+        mainBgStart: "rgb(46, 204, 113)",
+        mainBgEnd: "rgb(39, 174, 96)",
+        shadowColor1: "rgba(0, 128, 64, 0)",
+        shadowColor2: "rgba(46, 204, 113, 0.5)",
+        shadowColor3: "rgba(255, 255, 255, 0.8)",
+        shadowColor4: "rgb(88, 214, 141)",
+        shapeAStart: "rgb(102, 255, 178)",
+        shapeAEnd: "rgba(39, 174, 96, 0)",
+        shapeBStart: "rgb(153, 255, 204)",
+        shapeBMiddle: "rgb(46, 204, 113)",
+        shapeBEnd: "rgba(0, 128, 64, 0)",
+        shapeCStart: "rgba(230, 255, 240, 0)",
+        shapeCMiddle: "rgba(102, 255, 178, 0.3)",
+        shapeCEnd: "#2ECC71",
+        shapeDStart: "rgba(240, 255, 250, 0)",
+        shapeDMiddle: "rgba(88, 214, 141, 0.4)",
+        shapeDEnd: "#1E8449",
     },
 };
 
 const baseOrbSize = 82; // Base size of the main orb in px
 const baseShapeSize = 72; // Base size of the inner shapes in px
-const Orb = ({ palette = colorPalettes.cosmicNebula, size = 1, animationSpeedBase = 1, animationSpeedHue = 1, hueRotation = 120, mainOrbHueAnimation = false, }) => {
+const defaultSize = 1;
+const defaultAnimationSpeedBase = 1;
+const defaultAnimationSpeedHue = 1;
+const defaultHueRotation = 120;
+const defaultMainOrbHueAnimation = false;
+const defaultBlobAOpacity = 0.3;
+const defaultBlobBOpacity = 0.8;
+
+const Orb = ({ palette = colorPalettes.cosmicNebula, size = defaultSize, animationSpeedBase = defaultAnimationSpeedBase, animationSpeedHue = defaultAnimationSpeedHue, hueRotation = defaultHueRotation, mainOrbHueAnimation = defaultMainOrbHueAnimation, blobAOpacity = defaultBlobAOpacity, blobBOpacity = defaultBlobBOpacity, }) => {
     const cssVariables = useMemo(() => ({
         "--react-ai-orb-size": `${size * baseOrbSize}px`,
         "--shapes-size": `${size * baseShapeSize}px`,
@@ -182,6 +204,8 @@ const Orb = ({ palette = colorPalettes.cosmicNebula, size = 1, animationSpeedBas
         "--shape-d-start": palette.shapeDStart,
         "--shape-d-middle": palette.shapeDMiddle,
         "--shape-d-end": palette.shapeDEnd,
+        "--blob-a-opacity": blobAOpacity,
+        "--blob-b-opacity": blobBOpacity,
         "--animation-rotation-speed-base": `${1 / (animationSpeedBase * 0.5)}s`,
         "--animation-hue-speed-base": `${1 / (animationSpeedHue * 0.5)}s`,
         "--hue-rotation": `${hueRotation}deg`,
@@ -190,11 +214,13 @@ const Orb = ({ palette = colorPalettes.cosmicNebula, size = 1, animationSpeedBas
             : "none",
     }), [
         palette,
+        size,
         animationSpeedBase,
         animationSpeedHue,
         hueRotation,
         mainOrbHueAnimation,
-        size,
+        blobAOpacity,
+        blobBOpacity,
     ]);
     return (React.createElement("div", { style: Object.assign({}, cssVariables) },
         React.createElement("div", { className: "orb-main" },
@@ -206,4 +232,56 @@ const Orb = ({ palette = colorPalettes.cosmicNebula, size = 1, animationSpeedBas
             React.createElement(SvgElements, { color1: palette.mainBgStart, color2: palette.mainBgEnd }))));
 };
 
-export { Orb, colorPalettes };
+const oceanDepthsPreset = {
+    palette: colorPalettes.oceanDepths,
+    blobBOpacity: 0.3,
+    size: defaultSize,
+    animationSpeedBase: defaultAnimationSpeedBase,
+    animationSpeedHue: defaultAnimationSpeedHue,
+    hueRotation: defaultHueRotation,
+    mainOrbHueAnimation: defaultMainOrbHueAnimation,
+};
+const galaxyPreset = {
+    palette: colorPalettes.galaxy,
+    blobBOpacity: 0.3,
+    size: defaultSize,
+    animationSpeedBase: 1.3,
+    animationSpeedHue: defaultAnimationSpeedHue,
+    hueRotation: 360,
+    mainOrbHueAnimation: defaultMainOrbHueAnimation,
+};
+const caribeanPreset = {
+    palette: colorPalettes.caribean,
+    size: defaultSize,
+    animationSpeedBase: defaultAnimationSpeedBase,
+    animationSpeedHue: defaultAnimationSpeedHue,
+    hueRotation: defaultHueRotation,
+    mainOrbHueAnimation: defaultMainOrbHueAnimation,
+};
+const cherryBlossomPreset = {
+    palette: colorPalettes.cherryBlossom,
+    size: defaultSize,
+    animationSpeedBase: defaultAnimationSpeedBase,
+    animationSpeedHue: defaultAnimationSpeedHue,
+    hueRotation: 0,
+    mainOrbHueAnimation: defaultMainOrbHueAnimation,
+};
+const emeraldPreset = {
+    palette: colorPalettes.emerald,
+    size: defaultSize,
+    animationSpeedBase: defaultAnimationSpeedBase,
+    animationSpeedHue: defaultAnimationSpeedHue,
+    hueRotation: 0,
+    blobBOpacity: 0.2,
+    mainOrbHueAnimation: defaultMainOrbHueAnimation,
+};
+const multiColorPreset = {
+    palette: colorPalettes.cosmicNebula,
+    size: defaultSize,
+    animationSpeedBase: defaultAnimationSpeedBase,
+    animationSpeedHue: 0.25,
+    hueRotation: 360,
+    mainOrbHueAnimation: true,
+};
+
+export { Orb, caribeanPreset, cherryBlossomPreset, colorPalettes, emeraldPreset, galaxyPreset, multiColorPreset, oceanDepthsPreset };

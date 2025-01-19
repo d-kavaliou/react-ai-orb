@@ -2,27 +2,29 @@ import React, { useMemo } from "react";
 import "./styles.css";
 import { SvgElements } from "../SvgElements/SvgElements";
 import { colorPalettes } from "../../palette/colorPalettes";
-
-export interface OrbProps {
-  /** Size of the orb in pixels */
-  size?: number;
-  /** Primary color of the orb gradient */
-  color: string;
-  /** Shining effect in the middle of the orb */
-  shineMiddle?: boolean;
-}
-
-const baseOrbSize = 82; // Base size of the main orb in px
-const baseShapeSize = 72; // Base size of the inner shapes in px
+import {
+  baseOrbSize,
+  baseShapeSize,
+  defaultAnimationSpeedBase,
+  defaultAnimationSpeedHue,
+  defaultBlobAOpacity,
+  defaultBlobBOpacity,
+  defaultHueRotation,
+  defaultMainOrbHueAnimation,
+  defaultSize,
+} from "../../constants";
+import { ReactAIOrbProps } from "../../types";
 
 export const Orb = ({
   palette = colorPalettes.cosmicNebula,
-  size = 1,
-  animationSpeedBase = 1,
-  animationSpeedHue = 1,
-  hueRotation = 120,
-  mainOrbHueAnimation = false,
-}) => {
+  size = defaultSize,
+  animationSpeedBase = defaultAnimationSpeedBase,
+  animationSpeedHue = defaultAnimationSpeedHue,
+  hueRotation = defaultHueRotation,
+  mainOrbHueAnimation = defaultMainOrbHueAnimation,
+  blobAOpacity = defaultBlobAOpacity,
+  blobBOpacity = defaultBlobBOpacity,
+}: ReactAIOrbProps) => {
   const cssVariables = useMemo(
     () =>
       ({
@@ -45,6 +47,8 @@ export const Orb = ({
         "--shape-d-start": palette.shapeDStart,
         "--shape-d-middle": palette.shapeDMiddle,
         "--shape-d-end": palette.shapeDEnd,
+        "--blob-a-opacity": blobAOpacity,
+        "--blob-b-opacity": blobBOpacity,
         "--animation-rotation-speed-base": `${1 / (animationSpeedBase * 0.5)}s`,
         "--animation-hue-speed-base": `${1 / (animationSpeedHue * 0.5)}s`,
         "--hue-rotation": `${hueRotation}deg`,
@@ -54,11 +58,13 @@ export const Orb = ({
       } as React.CSSProperties),
     [
       palette,
+      size,
       animationSpeedBase,
       animationSpeedHue,
       hueRotation,
       mainOrbHueAnimation,
-      size,
+      blobAOpacity,
+      blobBOpacity,
     ]
   );
 

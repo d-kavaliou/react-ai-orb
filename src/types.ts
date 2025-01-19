@@ -20,11 +20,23 @@ export type OrbPalette = {
 
 export type PaletteNames =
   | "cosmicNebula"
-  | "sunsetGlow"
+  | "caribean"
+  | "galaxy"
   | "oceanDepths"
-  | "northernLights"
+  | "emerald"
   | "cherryBlossom";
 
 export type OrbPalettes = {
   [K in PaletteNames]: OrbPalette;
+};
+
+export type ReactAIOrbProps = {
+  palette?: OrbPalette;
+  size?: number;
+  animationSpeedBase?: number;
+  animationSpeedHue?: number;
+  hueRotation?: number;
+  mainOrbHueAnimation?: boolean;
+  blobAOpacity?: number;
+  blobBOpacity?: number;
 };

@@ -17,7 +17,17 @@ export type OrbPalette = {
     shapeDMiddle: string;
     shapeDEnd: string;
 };
-export type PaletteNames = "cosmicNebula" | "sunsetGlow" | "oceanDepths" | "northernLights" | "cherryBlossom";
+export type PaletteNames = "cosmicNebula" | "caribean" | "galaxy" | "oceanDepths" | "emerald" | "cherryBlossom";
 export type OrbPalettes = {
     [K in PaletteNames]: OrbPalette;
+};
+export type ReactAIOrbProps = {
+    palette?: OrbPalette;
+    size?: number;
+    animationSpeedBase?: number;
+    animationSpeedHue?: number;
+    hueRotation?: number;
+    mainOrbHueAnimation?: boolean;
+    blobAOpacity?: number;
+    blobBOpacity?: number;
 };
