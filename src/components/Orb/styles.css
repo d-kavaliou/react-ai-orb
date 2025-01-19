@@ -80,6 +80,8 @@
   top: 6%;
 }
 
+/* shape styles */
+
 .shape-a {
   border-radius: 50%;
   height: var(--shapes-size);
