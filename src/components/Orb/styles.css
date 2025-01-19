@@ -40,6 +40,7 @@
     var(--main-bg-start) 0%,
     var(--main-bg-end) 70%
   );
+  /*transform: scale(var(--react-ai-orb-size));*/
 
   box-shadow: var(--shadow-color-1) 0px 4px 6px 0px,
     var(--shadow-color-2) 0px 5px 10px 0px,
@@ -81,8 +82,8 @@
 
 .shape-a {
   border-radius: 50%;
-  height: 72px;
-  width: 72px;
+  height: var(--shapes-size);
+  width: var(--shapes-size);
   background-image: radial-gradient(
     circle at 50% 90%,
     var(--shape-a-start) 0%,
@@ -96,8 +97,8 @@
 
 .shape-b {
   border-radius: 50%;
-  height: 72px;
-  width: 72px;
+  height: var(--shapes-size);
+  width: var(--shapes-size);
   border-radius: 50%;
   background: radial-gradient(
     circle at 33% 12%,
@@ -124,8 +125,8 @@
 }
 
 .shape-c {
-  height: 72px;
-  width: 72px;
+  height: var(--shapes-size);
+  width: var(--shapes-size);
   border-radius: 50%;
   background-image: radial-gradient(
     circle at 31% 12%,
@@ -152,8 +153,8 @@
 }
 
 .shape-d {
-  height: 72px;
-  width: 72px;
+  height: var(--shapes-size);
+  width: var(--shapes-size);
   border-radius: 50%;
   background-image: radial-gradient(
     circle at 12% 80%,
@@ -163,8 +164,8 @@
   );
   filter: blur(1px);
   opacity: 0.55;
-
   transform-style: preserve-3d;
+  /* Animation */
   animation: rotateDiagonal
       calc(
         var(--animation-rotation-speed-base) +
@@ -180,8 +181,8 @@
 }
 
 .glass {
-  height: 72px;
-  width: 72px;
+  height: var(--shapes-size);
+  width: var(--shapes-size);
   opacity: 0.8;
   border-radius: 50%;
   background: transparent;

@@ -18,6 +18,9 @@ const colors = {
   dark: "#0066ff",
 };
 
+const baseOrbSize = 82; // Base size of the main orb in px
+const baseShapeSize = 72; // Base size of the inner shapes in px
+
 export const Orb = ({
   mainBgStart = "rgb(236, 133, 255)",
   mainBgEnd = "rgb(49, 138, 255)",
@@ -45,7 +48,8 @@ export const Orb = ({
   const cssVariables = useMemo(
     () =>
       ({
-        "--react-ai-orb-size": `${size * 82}px`,
+        "--react-ai-orb-size": `${size * baseOrbSize}px`,
+        "--shapes-size": `${size * baseShapeSize}px`,
         "--main-bg-start": mainBgStart,
         "--main-bg-end": mainBgEnd,
         "--shadow-color-1": shadowColor1,
