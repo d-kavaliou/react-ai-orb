@@ -1,6 +1,6 @@
 {
   "name": "react-ai-orb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Animated orb React component",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
