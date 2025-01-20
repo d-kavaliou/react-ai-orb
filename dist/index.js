@@ -288,7 +288,7 @@ const multiColorPreset = {
     size: defaultSize,
     animationSpeedBase: defaultAnimationSpeedBase,
     animationSpeedHue: 0.25,
-    hueRotation: 360,
+    hueRotation: defaultHueRotation,
     mainOrbHueAnimation: true,
 };
 
