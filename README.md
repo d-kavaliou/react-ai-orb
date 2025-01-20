@@ -60,6 +60,14 @@ const MyComponent = () => (
 - 🦄 `multiColorPreset`
 - ☀️ `goldenGlowPreset`
 
+## Preset Usage
+```jsx
+import { Orb, oceanDepthsPreset } from "react-ai-orb";
+
+const MyComponent = () => (
+  return  <Orb {...oceanDepthsPreset} />
+);
+```
 
 ## 🤝 Contributing
 Feel free to open issues or submit PRs for new features, bug fixes, or documentation improvements.
