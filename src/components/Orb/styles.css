@@ -1,4 +1,5 @@
 .orb-main {
+  display: flex;
   cursor: pointer;
   position: relative;
   overflow: hidden;
