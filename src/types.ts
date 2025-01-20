@@ -24,7 +24,8 @@ export type PaletteNames =
   | "galaxy"
   | "oceanDepths"
   | "emerald"
-  | "cherryBlossom";
+  | "cherryBlossom"
+  | "goldenGlow";
 
 export type OrbPalettes = {
   [K in PaletteNames]: OrbPalette;

@@ -64,3 +64,9 @@ export const multiColorPreset: ReactAIOrbProps = {
   hueRotation: defaultHueRotation,
   mainOrbHueAnimation: true,
 };
+
+export const goldenGlowPreset: ReactAIOrbProps = {
+  palette: colorPalettes.goldenGlow,
+  blobBOpacity: 0.3,
+  hueRotation: 0,
+};
