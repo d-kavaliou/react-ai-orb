@@ -190,6 +190,25 @@ const colorPalettes = {
         shapeDMiddle: "rgba(255, 215, 0, 0.5)",
         shapeDEnd: "#FFB800",
     },
+    volcanic: {
+        mainBgStart: "rgb(50, 10, 0)",
+        mainBgEnd: "rgb(150, 20, 0)",
+        shadowColor1: "rgba(255, 69, 0, 0)",
+        shadowColor2: "rgba(255, 69, 0, 0.4)",
+        shadowColor3: "rgba(255, 140, 0, 0.7)",
+        shadowColor4: "rgb(255, 0, 0)",
+        shapeAStart: "rgb(255, 87, 34)",
+        shapeAEnd: "rgba(255, 69, 0, 0)",
+        shapeBStart: "rgb(255, 99, 71)",
+        shapeBMiddle: "rgb(255, 69, 0)",
+        shapeBEnd: "rgba(200, 0, 0, 0)",
+        shapeCStart: "rgba(255, 87, 34, 0.5)",
+        shapeCMiddle: "rgba(255, 140, 0, 0.7)",
+        shapeCEnd: "rgba(255, 69, 0, 1)",
+        shapeDStart: "rgba(50, 10, 0, 0.5)",
+        shapeDMiddle: "rgba(200, 30, 10, 0.7)",
+        shapeDEnd: "rgba(255, 69, 0, 0.8)",
+    },
 };
 
 const baseOrbSize = 82; // Base size of the main orb in px
@@ -307,5 +326,10 @@ const goldenGlowPreset = {
     blobBOpacity: 0.3,
     hueRotation: 0,
 };
+const volcanicPreset = {
+    palette: colorPalettes.volcanic,
+    blobBOpacity: 0.3,
+    hueRotation: 0,
+};
 
-export { Orb, caribeanPreset, cherryBlossomPreset, colorPalettes, emeraldPreset, galaxyPreset, goldenGlowPreset, multiColorPreset, oceanDepthsPreset };
+export { Orb, caribeanPreset, cherryBlossomPreset, colorPalettes, emeraldPreset, galaxyPreset, goldenGlowPreset, multiColorPreset, oceanDepthsPreset, volcanicPreset };

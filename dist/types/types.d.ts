@@ -17,7 +17,7 @@ export type OrbPalette = {
     shapeDMiddle: string;
     shapeDEnd: string;
 };
-export type PaletteNames = "cosmicNebula" | "caribean" | "galaxy" | "oceanDepths" | "emerald" | "cherryBlossom" | "goldenGlow";
+export type PaletteNames = "cosmicNebula" | "caribean" | "galaxy" | "oceanDepths" | "emerald" | "cherryBlossom" | "goldenGlow" | "volcanic";
 export type OrbPalettes = {
     [K in PaletteNames]: OrbPalette;
 };

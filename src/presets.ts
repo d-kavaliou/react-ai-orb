@@ -70,3 +70,9 @@ export const goldenGlowPreset: ReactAIOrbProps = {
   blobBOpacity: 0.3,
   hueRotation: 0,
 };
+
+export const volcanicPreset: ReactAIOrbProps = {
+  palette: colorPalettes.volcanic,
+  blobBOpacity: 0.3,
+  hueRotation: 0,
+};
