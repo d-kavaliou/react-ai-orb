@@ -69,5 +69,10 @@ const MyComponent = () => (
 - 🦄 `multiColorPreset`
 - ☀️ `goldenGlowPreset`
 
+## 👨‍💻 Development
+```
+npx rollup -c
+```
+
 ## 🤝 Contributing
 Feel free to open issues or submit PRs for new features, bug fixes, or documentation improvements.
