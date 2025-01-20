@@ -8,6 +8,13 @@ Install the package via npm:
 npm i react-ai-orb
 ```
 ## 💻 Usage
+```jsx
+import { Orb } from "react-ai-orb";
+
+const MyComponent = () => (
+  return  <Orb />
+);
+```
 
 ## ⚙️ Props
 | Prop                  | Type        | Default         | Description                                                                 |
