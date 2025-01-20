@@ -53,6 +53,9 @@ const MyComponent = () => (
 | `shapeDEnd`      | `string` | The ending color of shape D.                                                |
 
 ## 📦 Presets
+
+<p align="center" width="100%"><img src="https://github.com/user-attachments/assets/64c8d073-d9d9-45bb-8183-428f19963caf" /></p>
+  
 ### Preset Usage
 ```jsx
 import { Orb, oceanDepthsPreset } from "react-ai-orb";
@@ -70,6 +73,7 @@ const MyComponent = () => (
 - ❇️ `emeraldPreset`
 - 🦄 `multiColorPreset`
 - ☀️ `goldenGlowPreset`
+
 
 ## 👨‍💻 Development
 ```
