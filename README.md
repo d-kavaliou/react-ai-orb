@@ -1,5 +1,5 @@
 # react-ai-orb
-An animated Orb UI component for React apps! Perfect for AI interfaces, assistants, or anywhere you need a glowing orb. 🔮✨
+A beautiful, customizable animated orb component for React applications! Perfect for AI interfaces, assistants, interactive chatbots, or anywhere you need a glowing orb. 🔮✨
 
 ## 🚀 Installation
 Install the package via npm:
@@ -7,7 +7,6 @@ Install the package via npm:
 ```
 npm install ai-orb-component
 ```
-
 ## 💻 Usage
 
 ## ⚙️ Props
