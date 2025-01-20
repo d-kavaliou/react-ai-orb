@@ -5,7 +5,7 @@ A beautiful, customizable animated orb component for React applications! Perfect
 Install the package via npm:
 
 ```
-npm install ai-orb-component
+npm i react-ai-orb
 ```
 ## 💻 Usage
 
