@@ -50,17 +50,8 @@ const MyComponent = () => (
 | `shapeDMiddle`   | `string` | The middle color of shape D.                                                |
 | `shapeDEnd`      | `string` | The ending color of shape D.                                                |
 
-
-## 🌟 Included Presets
-- 🪼 `oceanDepthsPreset`
-- 🌌 `galaxyPreset`
-- 🌊 `caribeanPreset`
-- 🌸 `cherryBlossomPreset`
-- ❇️ `emeraldPreset`
-- 🦄 `multiColorPreset`
-- ☀️ `goldenGlowPreset`
-
-## Preset Usage
+## 📦 Presets
+### Preset Usage
 ```jsx
 import { Orb, oceanDepthsPreset } from "react-ai-orb";
 
@@ -68,6 +59,15 @@ const MyComponent = () => (
   return  <Orb {...oceanDepthsPreset} />
 );
 ```
+
+### Included Presets
+- 🪼 `oceanDepthsPreset`
+- 🌌 `galaxyPreset`
+- 🌊 `caribeanPreset`
+- 🌸 `cherryBlossomPreset`
+- ❇️ `emeraldPreset`
+- 🦄 `multiColorPreset`
+- ☀️ `goldenGlowPreset`
 
 ## 🤝 Contributing
 Feel free to open issues or submit PRs for new features, bug fixes, or documentation improvements.
