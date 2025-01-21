@@ -1,4 +1,4 @@
-# react-ai-orb
+# react-ai-orb   ![downloads](https://img.shields.io/npm/dm/react-ai-orb.svg?color=5f63f1)
 A beautiful, customizable animated orb component for React applications! Perfect for AI interfaces, assistants, interactive chatbots, or anywhere you need a glowing orb. 🔮✨
 
 <p align="center" width="100%"><img src="https://github.com/user-attachments/assets/07c87ec3-1c81-4295-9ee3-c0f0bfaca6dc" /></p>
