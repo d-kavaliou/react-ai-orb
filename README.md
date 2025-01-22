@@ -18,6 +18,13 @@ const MyComponent = () => (
 );
 ```
 
+## ⚛️ Next JS 
+The component needs to be imported like this:
+```jsx
+"use client";
+import { Orb } from "react-ai-orb";
+```
+
 ## ⚙️ Props
 | Prop                  | Type        | Default         | Description                                                                 |
 |-----------------------|-------------|-----------------|-----------------------------------------------------------------------------|
