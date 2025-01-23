@@ -7,3 +7,4 @@ export declare const defaultHueRotation = 120;
 export declare const defaultMainOrbHueAnimation = false;
 export declare const defaultBlobAOpacity = 0.3;
 export declare const defaultBlobBOpacity = 0.8;
+export declare const defaultNoShadowValue = false;

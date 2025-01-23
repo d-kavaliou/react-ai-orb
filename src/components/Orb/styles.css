@@ -11,13 +11,8 @@
     var(--main-bg-start) 0%,
     var(--main-bg-end) 70%
   );
-  /*transform: scale(var(--react-ai-orb-size));*/
 
-  box-shadow: var(--shadow-color-1) 0px 4px 6px 0px,
-    var(--shadow-color-2) 0px 5px 10px 0px,
-    var(--shadow-color-3) 0px 0px 1px 0px inset,
-    var(--shadow-color-4) 0px 1px 7px 0px inset;
-
+  box-shadow: var(--main-shadow);
   animation: var(--main-hue-animation);
 }
 

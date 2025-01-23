@@ -9,3 +9,5 @@ export const defaultMainOrbHueAnimation = false;
 
 export const defaultBlobAOpacity = 0.3;
 export const defaultBlobBOpacity = 0.8;
+
+export const defaultNoShadowValue = false;

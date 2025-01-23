@@ -30,4 +30,5 @@ export type ReactAIOrbProps = {
     mainOrbHueAnimation?: boolean;
     blobAOpacity?: number;
     blobBOpacity?: number;
+    noShadow?: boolean;
 };

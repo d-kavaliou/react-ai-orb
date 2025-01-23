@@ -11,6 +11,7 @@ import {
   defaultBlobBOpacity,
   defaultHueRotation,
   defaultMainOrbHueAnimation,
+  defaultNoShadowValue,
   defaultSize,
 } from "../../constants";
 import { ReactAIOrbProps } from "../../types";
@@ -24,6 +25,7 @@ export const Orb = ({
   mainOrbHueAnimation = defaultMainOrbHueAnimation,
   blobAOpacity = defaultBlobAOpacity,
   blobBOpacity = defaultBlobBOpacity,
+  noShadow = defaultNoShadowValue,
 }: ReactAIOrbProps) => {
   const cssVariables = useMemo(
     () =>
@@ -36,6 +38,12 @@ export const Orb = ({
         "--shadow-color-2": palette.shadowColor2,
         "--shadow-color-3": palette.shadowColor3,
         "--shadow-color-4": palette.shadowColor4,
+        "--main-shadow": noShadow
+          ? "none"
+          : `var(--shadow-color-1) 0px 4px 6px 0px,
+             var(--shadow-color-2) 0px 5px 10px 0px,
+             var(--shadow-color-3) 0px 0px 1px 0px inset,
+             var(--shadow-color-4) 0px 1px 7px 0px inset`,
         "--shape-a-start": palette.shapeAStart,
         "--shape-a-end": palette.shapeAEnd,
         "--shape-b-start": palette.shapeBStart,
@@ -82,10 +90,6 @@ export const Orb = ({
         <div className="shape-d loc-d" />
 
         <SvgElements color1={palette.mainBgStart} color2={palette.mainBgEnd} />
-
-        {/* Particle canvas 
-        <canvas ref={canvasRef} className="absolute inset-0 mix-blend-screen" />
-        */}
       </div>
     </div>
   );
