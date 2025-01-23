@@ -36,6 +36,7 @@ import { Orb } from "react-ai-orb";
 | `mainOrbHueAnimation`| `boolean`    | `false`     | Enables or disables the hue animation on the main orb.                      |
 | `blobAOpacity`       | `number`     | `0.3`     | Controls the opacity of blob A (range: 0 to 1).                             |
 | `blobBOpacity`       | `number`     | `0.8`     | Controls the opacity of blob B (range: 0 to 1).                             |
+| `noShadow`           | `boolean`     | `false`     | Disables the Orb's shadow when set to `true`.                   |
 
 ## 🎨 Palette
 
