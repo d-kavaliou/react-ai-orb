@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import "./styles.css";
+import "./orb.css";
 import { SvgElements } from "../SvgElements/SvgElements";
 import { colorPalettes } from "../../palette/colorPalettes";
 import {
@@ -77,11 +78,7 @@ export const Orb = ({
   );
 
   return (
-    <div
-      style={{
-        ...cssVariables,
-      }}
-    >
+    <div className="orb-root">
       <div className="orb-main">
         <div className="glass loc-glass" />
         <div className="shape-a loc-a" />
