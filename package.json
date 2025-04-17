@@ -1,6 +1,6 @@
 {
   "name": "react-ai-orb-csp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A beautiful, customizable animated orb component for React applications! Perfect for AI interfaces, assistants, interactive chatbots, or anywhere you need a glowing orb.",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
