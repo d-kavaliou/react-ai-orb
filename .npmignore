@@ -1,5 +1,6 @@
 # Exclude source files
-/src
+/src/*
+!/src/components/Orb/orb-presets.css
 
 # Exclude local configuration
 /.babelrc

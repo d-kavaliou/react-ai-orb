@@ -1,86 +1,237 @@
-svg {
-  --svg-gradient-cosmic-a-start: rgb(236, 133, 255);
-  --svg-gradient-cosmic-a-end: rgb(49, 138, 255);
-  --svg-gradient-cosmic-b-start: rgb(236, 133, 255);
-  --svg-gradient-cosmic-b-end: rgb(49, 138, 255);
-  
-  --svg-gradient-caribean-a-start: rgb(64, 224, 208);
-  --svg-gradient-caribean-a-end: rgb(76, 189, 255);
-  --svg-gradient-caribean-b-start: rgb(64, 224, 208);
-  --svg-gradient-caribean-b-end: rgb(76, 189, 255);
+/* Size presets */
+.orb-size-xs {
+  --react-ai-orb-size: 41px;
+  --shapes-size: 36px;
 }
 
+.orb-size-sm {
+  --react-ai-orb-size: 62px;
+  --shapes-size: 54px;
+}
+
+.orb-size-md {
+  --react-ai-orb-size: 82px;
+  --shapes-size: 72px;
+}
+
+.orb-size-lg {
+  --react-ai-orb-size: 143px;
+  --shapes-size: 126px;
+}
+
+.orb-size-xl {
+  --react-ai-orb-size: 205px;
+  --shapes-size: 180px;
+}
+
+.orb-size-xxl {
+  --react-ai-orb-size: 246px;
+  --shapes-size: 216px;
+}
+
+/* Animation speed presets */
+.orb-speed-slow {
+  --animation-rotation-speed-base: 4s;
+  --animation-hue-speed-base: 4s;
+}
+
+.orb-speed-medium {
+  --animation-rotation-speed-base: 2s;
+  --animation-hue-speed-base: 2s;
+}
+
+.orb-speed-fast {
+  --animation-rotation-speed-base: 1s;
+  --animation-hue-speed-base: 1s;
+}
+
+.orb-speed-very-fast {
+  --animation-rotation-speed-base: 0.5s;
+  --animation-hue-speed-base: 0.5s;
+}
+
+/* Hue rotation presets */
+.orb-hue-small   { --hue-rotation: 60deg;  }
+.orb-hue-medium  { --hue-rotation: 120deg; }
+.orb-hue-large   { --hue-rotation: 240deg; }
+.orb-hue-full    { --hue-rotation: 360deg; }
+
+/* Blob opacity presets */
+@each $name, $value in (
+  "10": 0.1,
+  "30": 0.3,
+  "50": 0.5,
+  "70": 0.7,
+  "90": 0.9
+) {
+  .blob-a-opacity-#{$name} { --blob-a-opacity: $value; }
+  .blob-b-opacity-#{$name} { --blob-b-opacity: $value; }
+}
+
+/* Hue animation */
+.orb-main-hue-animated { --main-hue-animation: hueshift var(--animation-hue-speed-base) linear infinite; }
+
+/* Shadow control */
+.orb-no-shadow { --main-shadow: none; }
+
+/* Palette presets */
+$palettes: (
+  cosmicNebula: (
+    main-bg-start:  rgb(236 133 255),
+    main-bg-end:    rgb(49 138 255),
+    shadow1:        rgb(166 35 248 / 0%),
+    shadow2:        rgb(121 19 255 / 50%),
+    shadow3:        rgb(255 255 255 / 90%),
+    shadow4:        rgb(253 164 250),
+    shape-a-start:  rgb(133 210 255),
+    shape-a-end:    rgb(115 49 255 / 0%),
+    shape-b-start:  rgb(254 245 254),
+    shape-b-middle: rgb(253 109 255),
+    shape-b-end:    rgb(203 56 255 / 0%),
+    shape-c-start:  rgb(254 254 254 / 0%),
+    shape-c-middle: rgb(254 111 255 / 0%),
+    shape-c-end:    #7006fe,
+    shape-d-start:  rgb(254 254 254 / 0%),
+    shape-d-middle: rgb(142 111 255 / 0%),
+    shape-d-end:    #0ef
+  ),
+  caribean: (
+    main-bg-start:  rgb(64 224 208),
+    main-bg-end:    rgb(76 189 255),
+    shadow1:        rgb(8 226 255 / 0%),
+    shadow2:        rgb(43 173 216 / 50%),
+    shadow3:        rgb(255 255 255 / 90%),
+    shadow4:        rgb(72 209 204),
+    shape-a-start:  rgb(127 255 212),
+    shape-a-end:    rgb(0 105 148 / 0%),
+    shape-b-start:  rgb(240 241 255),
+    shape-b-middle: rgb(64 224 208),
+    shape-b-end:    rgb(0 128 128 / 0%),
+    shape-c-start:  rgb(224 255 255 / 0%),
+    shape-c-middle: rgb(32 178 170 / 0%),
+    shape-c-end:    #006064,
+    shape-d-start:  rgb(224 255 255 / 0%),
+    shape-d-middle: rgb(45 8 255 / 0%),
+    shape-d-end:    #00838f
+  ),
+  cherryBlossom: (
+    main-bg-start:  rgb(255 204 229),
+    main-bg-end:    rgb(255 102 153),
+    shadow1:        rgb(255 153 204 / 0%),
+    shadow2:        rgb(255 102 178 / 50%),
+    shadow3:        rgb(255 255 255 / 90%),
+    shadow4:        rgb(255 183 197),
+    shape-a-start:  rgb(255 228 240),
+    shape-a-end:    rgb(255 140 189 / 0%),
+    shape-b-start:  rgb(255 240 245),
+    shape-b-middle: rgb(255 105 180),
+    shape-b-end:    rgb(255 20 147 / 0%),
+    shape-c-start:  rgb(255 250 250 / 0%),
+    shape-c-middle: rgb(255 182 193 / 0%),
+    shape-c-end:    #ff69b4,
+    shape-d-start:  rgb(255 245 247 / 0%),
+    shape-d-middle: rgb(255 92 143 / 0%),
+    shape-d-end:    #ff1493
+  ),
+  /* … add additional palettes here in the same format … */
+);
+
+// Generate palette utility classes
+@each $palette-name, $vars in $palettes {
+  .orb-palette-#{$palette-name} {
+    --main-bg-start:  map-get($vars, main-bg-start);
+    --main-bg-end:    map-get($vars, main-bg-end);
+    --shadow-color-1: map-get($vars, shadow1);
+    --shadow-color-2: map-get($vars, shadow2);
+    --shadow-color-3: map-get($vars, shadow3);
+    --shadow-color-4: map-get($vars, shadow4);
+
+    --shape-a-start:  map-get($vars, shape-a-start);
+    --shape-a-end:    map-get($vars, shape-a-end);
+
+    --shape-b-start:  map-get($vars, shape-b-start);
+    --shape-b-middle: map-get($vars, shape-b-middle);
+    --shape-b-end:    map-get($vars, shape-b-end);
+
+    --shape-c-start:  map-get($vars, shape-c-start);
+    --shape-c-middle: map-get($vars, shape-c-middle);
+    --shape-c-end:    map-get($vars, shape-c-end);
+
+    --shape-d-start:  map-get($vars, shape-d-start);
+    --shape-d-middle: map-get($vars, shape-d-middle);
+    --shape-d-end:    map-get($vars, shape-d-end);
+  }
+}
+
+/* SVG gradient helpers */
+.blob-a,
+.blob-b {
+  &.orb-palette-cosmicNebula .blob-gradient { fill: url("#gradient-cosmic-#{&.blob-a & 'a' or 'b'}"); }
+  &.orb-palette-caribean    .blob-gradient { fill: url("#gradient-caribean-#{&.blob-a & 'a' or 'b'}"); }
+}
+
+/* Global SVG vars */
+svg {
+  --svg-gradient-cosmic-a-start: rgb(236 133 255);
+  --svg-gradient-cosmic-a-end:   rgb(49 138 255);
+  --svg-gradient-cosmic-b-start: rgb(236 133 255);
+  --svg-gradient-cosmic-b-end:   rgb(49 138 255);
+
+  --svg-gradient-caribean-a-start: rgb(64 224 208);
+  --svg-gradient-caribean-a-end:   rgb(76 189 255);
+  --svg-gradient-caribean-b-start: rgb(64 224 208);
+  --svg-gradient-caribean-b-end:   rgb(76 189 255);
+}
+
+/* Orb container */
 .orb-main {
-  display: flex;
-  cursor: pointer;
   position: relative;
+  display: flex;
   overflow: hidden;
+  width:  var(--react-ai-orb-size);
   height: var(--react-ai-orb-size);
-  width: var(--react-ai-orb-size);
   border-radius: 50%;
+  animation: var(--main-hue-animation);
   background-image: radial-gradient(
     circle at 50% 30%,
     var(--main-bg-start) 0%,
     var(--main-bg-end) 70%
   );
-
   box-shadow: var(--main-shadow);
-  animation: var(--main-hue-animation);
+  cursor: pointer;
 }
 
-/* Shape Locations */
+/* Layout helpers */
+.loc-a        { position: absolute; }
+.loc-b        { @extend .loc-a; top: 5%; left: 10%; }
+.loc-c,
+.loc-d        { @extend .loc-a; top: 5%; left: 5%; }
+.loc-glass    { @extend .loc-a; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-.loc-a {
-  position: absolute;
-}
-
-.loc-b {
-  position: absolute;
-  left: 10%;
-  top: 5%;
-}
-
-.loc-c {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-}
-
-.loc-d {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-}
-
-.loc-glass {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* shape styles */
-
-.shape-a {
-  border-radius: 50%;
-  height: var(--shapes-size);
+/* Shape base */
+%shape-base {
   width: var(--shapes-size);
+  height: var(--shapes-size);
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+/* Individual shapes */
+.shape-a {
+  @extend %shape-base;
+  animation: rotateDiagonal var(--animation-rotation-speed-base) linear infinite,
+             hueShift     var(--animation-hue-speed-base)        linear infinite;
   background-image: radial-gradient(
     circle at 50% 90%,
     var(--shape-a-start) 0%,
     var(--shape-a-end) 70%
   );
-  transform-style: preserve-3d;
-  /* Animation */
-  animation: rotateDiagonal var(--animation-rotation-speed-base) linear infinite,
-    hueShift var(--animation-hue-speed-base) linear infinite;
 }
 
 .shape-b {
-  border-radius: 50%;
-  height: var(--shapes-size);
-  width: var(--shapes-size);
-  border-radius: 50%;
+  @extend %shape-base;
+  animation: rotateDiagonal calc(var(--animation-rotation-speed-base) * 1.5) linear infinite,
+             hueShift     calc(var(--animation-hue-speed-base) * 1.5)        linear infinite;
   background: radial-gradient(
     circle at 33% 12%,
     var(--shape-b-start) 0%,
@@ -88,27 +239,14 @@ svg {
     var(--shape-b-end) 63%
   );
   filter: blur(2px);
-  will-change: transform;
-  transform-style: preserve-3d;
-  /* Animation */
-  animation: rotateDiagonal
-      calc(
-        var(--animation-rotation-speed-base) +
-          var(--animation-rotation-speed-base) * 0.5
-      )
-      linear infinite,
-    hueShift
-      calc(
-        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 0.5
-      )
-      linear infinite;
   mix-blend-mode: soft-light;
+  will-change: transform;
 }
 
 .shape-c {
-  height: var(--shapes-size);
-  width: var(--shapes-size);
-  border-radius: 50%;
+  @extend %shape-base;
+  animation: rotateDiagonal calc(var(--animation-rotation-speed-base) * 2) linear infinite,
+             hueShift     calc(var(--animation-hue-speed-base) * 2)        linear infinite;
   background-image: radial-gradient(
     circle at 31% 12%,
     var(--shape-c-start) 0%,
@@ -116,27 +254,14 @@ svg {
     var(--shape-c-end) 77%
   );
   filter: blur(1px);
-  opacity: 0.65;
-  transform-style: preserve-3d;
-  /* Animation */
-  animation: rotateDiagonal
-      calc(
-        var(--animation-rotation-speed-base) +
-          var(--animation-rotation-speed-base) * 1
-      )
-      linear infinite,
-    hueShift
-      calc(
-        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 1
-      )
-      linear infinite;
   mix-blend-mode: color-dodge;
+  opacity: 0.65;
 }
 
 .shape-d {
-  height: var(--shapes-size);
-  width: var(--shapes-size);
-  border-radius: 50%;
+  @extend %shape-base;
+  animation: rotateDiagonal calc(var(--animation-rotation-speed-base) * 2.5) linear infinite,
+             hueShift     calc(var(--animation-hue-speed-base) * 2.5)        linear infinite;
   background-image: radial-gradient(
     circle at 12% 80%,
     var(--shape-d-start) 0%,
@@ -144,140 +269,87 @@ svg {
     var(--shape-d-end) 77%
   );
   filter: blur(1px);
-  opacity: 0.55;
-  transform-style: preserve-3d;
-  /* Animation */
-  animation: rotateDiagonal
-      calc(
-        var(--animation-rotation-speed-base) +
-          var(--animation-rotation-speed-base) * 1.5
-      )
-      linear infinite,
-    hueShift
-      calc(
-        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 1.5
-      )
-      linear infinite;
   mix-blend-mode: color;
+  opacity: 0.55;
 }
 
+/* Glass overlay */
 .glass {
-  height: var(--shapes-size);
-  width: var(--shapes-size);
-  opacity: 0.8;
-  border-radius: 50%;
+  @extend %shape-base;
   background: transparent;
-  box-shadow: inset 0 -1px 6px 1px rgba(255, 255, 255, 0.5),
-    inset 0 3px 4px 0px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 -1px 6px 1px rgb(255 255 255 / 50%),
+    inset 0  3px 4px 0  rgb(255 255 255 / 50%);
+  opacity: 0.8;
+}
+
+/* Blobs */
+.blob-a,
+.blob-b {
+  @extend %shape-base;
+  mix-blend-mode: screen;
 }
 
 .blob-a {
-  animation: rotateDiagonal
-      calc(
-        var(--animation-rotation-speed-base) +
-          var(--animation-rotation-speed-base) * 2
-      )
-      linear infinite,
-    hueShift
-      calc(
-        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 2
-      )
-      linear infinite;
+  animation: rotateDiagonal calc(var(--animation-rotation-speed-base) * 3) linear infinite,
+             hueShift     calc(var(--animation-hue-speed-base) * 3)        linear infinite;
   opacity: var(--blob-a-opacity);
-  mix-blend-mode: screen;
 }
 
 .blob-b {
   position: absolute;
   top: 0;
-  opacity: var(--blob-b-opacity);
+  animation: rotateDiagonal calc(var(--animation-rotation-speed-base) * 3.5) linear infinite,
+             hueShift     calc(var(--animation-hue-speed-base) * 3.5)        linear infinite;
   mix-blend-mode: lighten;
-  animation: rotateDiagonal
-      calc(
-        var(--animation-rotation-speed-base) +
-          var(--animation-rotation-speed-base) * 2.5
-      )
-      linear infinite,
-    hueShift
-      calc(
-        var(--animation-hue-speed-base) + var(--animation-hue-speed-base) * 2.5
-      )
-      linear infinite;
+  opacity: var(--blob-b-opacity);
 }
 
+/* Shine effects */
 .blob-shine {
   position: absolute;
   top: 0;
-  opacity: 0.9;
-  fill: white;
-  transform: scale(0.4);
   animation: expand 3.5s linear infinite;
-  mix-blend-mode: hard-light;
+  fill: white;
   filter: blur(15px);
+  mix-blend-mode: hard-light;
+  opacity: 0.9;
+  transform: scale(0.4);
 }
 
 .shine-b {
-  mix-blend-mode: plus-lighter;
-  animation: expand-b 5s ease-in-out infinite;
-  opacity: 0.3;
   left: 15%;
+  animation: expand-b 5s ease-in-out infinite;
+  mix-blend-mode: plus-lighter;
+  opacity: 0.3;
 }
 
+/* Keyframes */
 @keyframes expand {
-  0% {
-    transform: scale(0.4);
-  }
-  50% {
-    transform: scale(0.1);
-  }
-  100% {
-    transform: scale(0.4);
-  }
+  0%   { transform: scale(0.4); }
+  50%  { transform: scale(0.1); }
+  100% { transform: scale(0.4); }
 }
 
 @keyframes expand-b {
-  0% {
-    transform: scale(0.6);
-  }
-  50% {
-    transform: scale(0.1);
-  }
-  100% {
-    transform: scale(0.6);
-  }
+  0%   { transform: scale(0.6); }
+  50%  { transform: scale(0.1); }
+  100% { transform: scale(0.6); }
 }
 
-/* Keyframes for 3D rotation */
 @keyframes rotateDiagonal {
-  0% {
-    transform: rotate3d(1, 1, 1, 0deg);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
+  0%   { transform: rotate3d(1, 1, 1, 0deg); }
+  100% { transform: rotate3d(1, 1, 1, 360deg); }
 }
 
 @keyframes hueShift {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(var(--hue-rotation));
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
+  0%   { filter: hue-rotate(0deg); }
+  50%  { filter: hue-rotate(var(--hue-rotation)); }
+  100% { filter: hue-rotate(0deg); }
 }
 
 @keyframes circleAnimation {
-  0% {
-    transform: rotate(-120deg);
-  }
-  50% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(-120deg);
-  }
+  0%   { transform: rotate(-120deg); }
+  50%  { transform: rotate(0); }
+  100% { transform: rotate(-120deg); }
 }
