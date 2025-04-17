@@ -1,3 +1,15 @@
+svg {
+  --svg-gradient-cosmic-a-start: rgb(236, 133, 255);
+  --svg-gradient-cosmic-a-end: rgb(49, 138, 255);
+  --svg-gradient-cosmic-b-start: rgb(236, 133, 255);
+  --svg-gradient-cosmic-b-end: rgb(49, 138, 255);
+  
+  --svg-gradient-caribean-a-start: rgb(64, 224, 208);
+  --svg-gradient-caribean-a-end: rgb(76, 189, 255);
+  --svg-gradient-caribean-b-start: rgb(64, 224, 208);
+  --svg-gradient-caribean-b-end: rgb(76, 189, 255);
+}
+
 .orb-main {
   display: flex;
   cursor: pointer;

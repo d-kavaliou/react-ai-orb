@@ -1,0 +1,299 @@
+/* Size presets */
+.orb-size-xs {
+    --react-ai-orb-size: 41px;
+    --shapes-size: 36px;
+  }
+  
+  .orb-size-sm {
+    --react-ai-orb-size: 62px;
+    --shapes-size: 54px;
+  }
+  
+  .orb-size-md {
+    --react-ai-orb-size: 82px;
+    --shapes-size: 72px;
+  }
+  
+  .orb-size-lg {
+    --react-ai-orb-size: 143px;
+    --shapes-size: 126px;
+  }
+  
+  .orb-size-xl {
+    --react-ai-orb-size: 205px;
+    --shapes-size: 180px;
+  }
+  
+  .orb-size-xxl {
+    --react-ai-orb-size: 246px;
+    --shapes-size: 216px;
+  }
+  
+  /* Animation speed presets */
+  .orb-speed-slow {
+    --animation-rotation-speed-base: 4s;
+    --animation-hue-speed-base: 4s;
+  }
+  
+  .orb-speed-medium {
+    --animation-rotation-speed-base: 2s;
+    --animation-hue-speed-base: 2s;
+  }
+  
+  .orb-speed-fast {
+    --animation-rotation-speed-base: 1s;
+    --animation-hue-speed-base: 1s;
+  }
+  
+  .orb-speed-very-fast {
+    --animation-rotation-speed-base: 0.5s;
+    --animation-hue-speed-base: 0.5s;
+  }
+  
+  /* Hue rotation presets */
+  .orb-hue-small {
+    --hue-rotation: 60deg;
+  }
+  
+  .orb-hue-medium {
+    --hue-rotation: 120deg;
+  }
+  
+  .orb-hue-large {
+    --hue-rotation: 240deg;
+  }
+  
+  .orb-hue-full {
+    --hue-rotation: 360deg;
+  }
+  
+  /* Blob opacity presets */
+  .blob-a-opacity-10 {
+    --blob-a-opacity: 0.1;
+  }
+  
+  .blob-a-opacity-30 {
+    --blob-a-opacity: 0.3;
+  }
+  
+  .blob-a-opacity-50 {
+    --blob-a-opacity: 0.5;
+  }
+  
+  .blob-a-opacity-70 {
+    --blob-a-opacity: 0.7;
+  }
+  
+  .blob-a-opacity-90 {
+    --blob-a-opacity: 0.9;
+  }
+  
+  .blob-b-opacity-10 {
+    --blob-b-opacity: 0.1;
+  }
+  
+  .blob-b-opacity-30 {
+    --blob-b-opacity: 0.3;
+  }
+  
+  .blob-b-opacity-50 {
+    --blob-b-opacity: 0.5;
+  }
+  
+  .blob-b-opacity-70 {
+    --blob-b-opacity: 0.7;
+  }
+  
+  .blob-b-opacity-90 {
+    --blob-b-opacity: 0.9;
+  }
+  
+  /* Hue animation */
+  .orb-main-hue-animated {
+    --main-hue-animation: hueShift var(--animation-hue-speed-base) linear infinite;
+  }
+  
+  /* Shadow control */
+  .orb-no-shadow {
+    --main-shadow: none;
+  }
+  
+  /* Palette presets */
+  .orb-palette-cosmicNebula {
+    --main-bg-start: rgb(236, 133, 255);
+    --main-bg-end: rgb(49, 138, 255);
+    --shadow-color-1: rgba(166, 35, 248, 0);
+    --shadow-color-2: rgba(121, 19, 255, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.9);
+    --shadow-color-4: rgb(253, 164, 250);
+    --shape-a-start: rgb(133, 210, 255);
+    --shape-a-end: rgba(115, 49, 255, 0);
+    --shape-b-start: rgb(254, 245, 254);
+    --shape-b-middle: rgb(253, 109, 255);
+    --shape-b-end: rgba(203, 56, 255, 0);
+    --shape-c-start: rgba(254, 254, 254, 0);
+    --shape-c-middle: rgba(254, 111, 255, 0);
+    --shape-c-end: #7006fe;
+    --shape-d-start: rgba(254, 254, 254, 0);
+    --shape-d-middle: rgba(142, 111, 255, 0);
+    --shape-d-end: #00eeff;
+  }
+  
+  .orb-palette-caribean {
+    --main-bg-start: rgb(64, 224, 208);
+    --main-bg-end: rgb(76, 189, 255);
+    --shadow-color-1: rgba(8, 226, 255, 0);
+    --shadow-color-2: rgba(43, 173, 216, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.9);
+    --shadow-color-4: rgb(72, 209, 204);
+    --shape-a-start: rgb(127, 255, 212);
+    --shape-a-end: rgba(0, 105, 148, 0);
+    --shape-b-start: rgb(240, 241, 255);
+    --shape-b-middle: rgb(64, 224, 208);
+    --shape-b-end: rgba(0, 128, 128, 0);
+    --shape-c-start: rgba(224, 255, 255, 0);
+    --shape-c-middle: rgba(32, 178, 170, 0);
+    --shape-c-end: #006064;
+    --shape-d-start: rgba(224, 255, 255, 0);
+    --shape-d-middle: rgba(45, 8, 255, 0);
+    --shape-d-end: #00838f;
+  }
+  
+  .orb-palette-cherryBlossom {
+    --main-bg-start: rgb(255, 204, 229);
+    --main-bg-end: rgb(255, 102, 153);
+    --shadow-color-1: rgba(255, 153, 204, 0);
+    --shadow-color-2: rgba(255, 102, 178, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.9);
+    --shadow-color-4: rgb(255, 183, 197);
+    --shape-a-start: rgb(255, 228, 240);
+    --shape-a-end: rgba(255, 140, 189, 0);
+    --shape-b-start: rgb(255, 240, 245);
+    --shape-b-middle: rgb(255, 105, 180);
+    --shape-b-end: rgba(255, 20, 147, 0);
+    --shape-c-start: rgba(255, 250, 250, 0);
+    --shape-c-middle: rgba(255, 182, 193, 0);
+    --shape-c-end: #FF69B4;
+    --shape-d-start: rgba(255, 245, 247, 0);
+    --shape-d-middle: rgba(255, 92, 143, 0);
+    --shape-d-end: #FF1493;
+  }
+  
+  .orb-palette-galaxy {
+    --main-bg-start: rgb(40, 40, 99);
+    --main-bg-end: rgb(50, 50, 100);
+    --shadow-color-1: rgba(166, 35, 248, 0);
+    --shadow-color-2: rgba(121, 19, 255, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.9);
+    --shadow-color-4: rgb(253, 164, 250);
+    --shape-a-start: rgb(133, 210, 255);
+    --shape-a-end: rgba(115, 49, 255, 0);
+    --shape-b-start: rgb(254, 245, 254);
+    --shape-b-middle: rgb(253, 109, 255);
+    --shape-b-end: rgba(203, 56, 255, 0);
+    --shape-c-start: rgba(254, 254, 254, 0);
+    --shape-c-middle: rgba(254, 111, 255, 0);
+    --shape-c-end: #7006fe;
+    --shape-d-start: rgba(254, 254, 254, 0);
+    --shape-d-middle: rgba(142, 111, 255, 0);
+    --shape-d-end: #00eeff;
+  }
+  
+  .orb-palette-oceanDepths {
+    --main-bg-start: rgb(4, 63, 255);
+    --main-bg-end: rgb(17, 19, 82);
+    --shadow-color-1: rgba(0, 149, 182, 0);
+    --shadow-color-2: rgba(0, 96, 128, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.9);
+    --shadow-color-4: rgb(72, 209, 204);
+    --shape-a-start: rgb(127, 255, 212);
+    --shape-a-end: rgba(0, 105, 148, 0);
+    --shape-b-start: rgb(240, 255, 255);
+    --shape-b-middle: rgb(64, 224, 208);
+    --shape-b-end: rgba(0, 128, 128, 0);
+    --shape-c-start: rgba(224, 255, 255, 0);
+    --shape-c-middle: rgba(32, 178, 170, 0);
+    --shape-c-end: #006064;
+    --shape-d-start: rgba(224, 255, 255, 0);
+    --shape-d-middle: rgba(0, 128, 128, 0);
+    --shape-d-end: #00838f;
+  }
+  
+  .orb-palette-emerald {
+    --main-bg-start: rgb(46, 204, 113);
+    --main-bg-end: rgb(39, 174, 96);
+    --shadow-color-1: rgba(0, 128, 64, 0);
+    --shadow-color-2: rgba(46, 204, 113, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.8);
+    --shadow-color-4: rgb(88, 214, 141);
+    --shape-a-start: rgb(102, 255, 178);
+    --shape-a-end: rgba(39, 174, 96, 0);
+    --shape-b-start: rgb(153, 255, 204);
+    --shape-b-middle: rgb(46, 204, 113);
+    --shape-b-end: rgba(0, 128, 64, 0);
+    --shape-c-start: rgba(230, 255, 240, 0);
+    --shape-c-middle: rgba(102, 255, 178, 0.3);
+    --shape-c-end: #2ECC71;
+    --shape-d-start: rgba(240, 255, 250, 0);
+    --shape-d-middle: rgba(88, 214, 141, 0.4);
+    --shape-d-end: #1E8449;
+  }
+  
+  .orb-palette-goldenGlow {
+    --main-bg-start: rgb(255, 204, 0);
+    --main-bg-end: rgb(255, 165, 0);
+    --shadow-color-1: rgba(255, 215, 0, 0);
+    --shadow-color-2: rgba(255, 215, 0, 0.5);
+    --shadow-color-3: rgba(255, 255, 255, 0.8);
+    --shadow-color-4: rgb(255, 140, 0);
+    --shape-a-start: rgb(255, 233, 100);
+    --shape-a-end: rgba(255, 215, 0, 0);
+    --shape-b-start: rgb(255, 210, 80);
+    --shape-b-middle: rgb(255, 180, 50);
+    --shape-b-end: rgba(255, 140, 0, 0);
+    --shape-c-start: rgba(255, 255, 255, 0);
+    --shape-c-middle: rgba(255, 245, 100, 0.5);
+    --shape-c-end: #FFD700;
+    --shape-d-start: rgba(255, 255, 255, 0);
+    --shape-d-middle: rgba(255, 215, 0, 0.5);
+    --shape-d-end: #FFB800;
+  }
+  
+  .orb-palette-volcanic {
+    --main-bg-start: rgb(50, 10, 0);
+    --main-bg-end: rgb(150, 20, 0);
+    --shadow-color-1: rgba(255, 69, 0, 0);
+    --shadow-color-2: rgba(255, 69, 0, 0.4);
+    --shadow-color-3: rgba(255, 140, 0, 0.7);
+    --shadow-color-4: rgb(255, 0, 0);
+    --shape-a-start: rgb(255, 87, 34);
+    --shape-a-end: rgba(255, 69, 0, 0);
+    --shape-b-start: rgb(255, 99, 71);
+    --shape-b-middle: rgb(255, 69, 0);
+    --shape-b-end: rgba(200, 0, 0, 0);
+    --shape-c-start: rgba(255, 87, 34, 0.5);
+    --shape-c-middle: rgba(255, 140, 0, 0.7);
+    --shape-c-end: rgba(255, 69, 0, 1);
+    --shape-d-start: rgba(50, 10, 0, 0.5);
+    --shape-d-middle: rgba(200, 30, 10, 0.7);
+    --shape-d-end: rgba(255, 69, 0, 0.8);
+  }
+  
+  /* SVG Gradients */
+  .blob-a.orb-palette-cosmicNebula .blob-gradient {
+    fill: url(#gradient-cosmic-a);
+  }
+  
+  .blob-b.orb-palette-cosmicNebula .blob-gradient {
+    fill: url(#gradient-cosmic-b);
+  }
+  
+  .blob-a.orb-palette-caribean .blob-gradient {
+    fill: url(#gradient-caribean-a);
+  }
+  
+  .blob-b.orb-palette-caribean .blob-gradient {
+    fill: url(#gradient-caribean-b);
+  }
+  
+  /* Continue for all palettes */

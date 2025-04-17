@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./styles.css";
-import "./orb.css";
-import { SvgElements } from "../SvgElements/SvgElements";
+import "./orb-presets.css";
+import { SvgElementsCSP } from "../SvgElements/SvgElements";
 import { colorPalettes } from "../../palette/colorPalettes";
 import {
-  baseOrbSize,
-  baseShapeSize,
   defaultAnimationSpeedBase,
   defaultAnimationSpeedHue,
   defaultBlobAOpacity,
@@ -17,9 +15,55 @@ import {
 } from "../../constants";
 import { ReactAIOrbProps } from "../../types";
 
-// Helper to generate a unique ID for each orb instance
-let orbCounter = 0;
-const getUniqueOrbId = () => `react-ai-orb-${orbCounter++}`;
+// Maps numeric values to predefined CSS classes
+const getSizeClass = (size: number) => {
+  if (size <= 0.5) return "orb-size-xs";
+  if (size <= 0.75) return "orb-size-sm";
+  if (size <= 1.25) return "orb-size-md";
+  if (size <= 1.75) return "orb-size-lg";
+  if (size <= 2.5) return "orb-size-xl";
+  return "orb-size-xxl";
+};
+
+const getSpeedClass = (speed: number) => {
+  if (speed <= 0.5) return "orb-speed-slow";
+  if (speed <= 0.9) return "orb-speed-medium";
+  if (speed <= 1.5) return "orb-speed-fast";
+  return "orb-speed-very-fast";
+};
+
+const getHueRotationClass = (rotation: number) => {
+  if (rotation <= 60) return "orb-hue-small";
+  if (rotation <= 180) return "orb-hue-medium";
+  if (rotation <= 270) return "orb-hue-large";
+  return "orb-hue-full";
+};
+
+const getOpacityClass = (opacity: number, prefix: string) => {
+  if (opacity <= 0.2) return `${prefix}-opacity-10`;
+  if (opacity <= 0.4) return `${prefix}-opacity-30`;
+  if (opacity <= 0.6) return `${prefix}-opacity-50`;
+  if (opacity <= 0.8) return `${prefix}-opacity-70`;
+  return `${prefix}-opacity-90`;
+};
+
+// Get palette class based on the closest match to predefined palettes
+const getPaletteClass = (palette: any) => {
+  // Compare the given palette with predefined palettes to find the closest match
+  const palettes = Object.entries(colorPalettes);
+  
+  for (const [name, presetPalette] of palettes) {
+    if (
+      palette.mainBgStart === presetPalette.mainBgStart &&
+      palette.mainBgEnd === presetPalette.mainBgEnd
+    ) {
+      return `orb-palette-${name}`;
+    }
+  }
+  
+  // Default to cosmic if no match is found
+  return "orb-palette-cosmicNebula";
+};
 
 export const Orb = ({
   palette = colorPalettes.cosmicNebula,
@@ -32,92 +76,40 @@ export const Orb = ({
   blobBOpacity = defaultBlobBOpacity,
   noShadow = defaultNoShadowValue,
 }: ReactAIOrbProps) => {
-  const orbId = useRef(getUniqueOrbId());
-  const styleId = `${orbId.current}-style`;
+  // Map props to predefined CSS classes
+  const sizeClass = getSizeClass(size);
+  const speedBaseClass = getSpeedClass(animationSpeedBase);
+  const speedHueClass = getSpeedClass(animationSpeedHue);
+  const hueRotationClass = getHueRotationClass(hueRotation);
+  const blobAOpacityClass = getOpacityClass(blobAOpacity, "blob-a");
+  const blobBOpacityClass = getOpacityClass(blobBOpacity, "blob-b");
+  const paletteClass = getPaletteClass(palette);
+  const hueAnimationClass = mainOrbHueAnimation ? "orb-main-hue-animated" : "";
+  const shadowClass = noShadow ? "orb-no-shadow" : "";
 
-  // Add the CSS variables through a <style> tag instead of inline styles
-  useEffect(() => {
-    const shadowValue = noShadow
-      ? "none"
-      : `var(--shadow-color-1) 0px 4px 6px 0px, 
-         var(--shadow-color-2) 0px 5px 10px 0px,
-         var(--shadow-color-3) 0px 0px 1px 0px inset,
-         var(--shadow-color-4) 0px 1px 7px 0px inset`;
-
-    const cssText = `
-      .${orbId.current} {
-        --react-ai-orb-size: ${size * baseOrbSize}px;
-        --shapes-size: ${size * baseShapeSize}px;
-        --main-bg-start: ${palette.mainBgStart};
-        --main-bg-end: ${palette.mainBgEnd};
-        --shadow-color-1: ${palette.shadowColor1};
-        --shadow-color-2: ${palette.shadowColor2};
-        --shadow-color-3: ${palette.shadowColor3};
-        --shadow-color-4: ${palette.shadowColor4};
-        --main-shadow: ${shadowValue};
-        --shape-a-start: ${palette.shapeAStart};
-        --shape-a-end: ${palette.shapeAEnd};
-        --shape-b-start: ${palette.shapeBStart};
-        --shape-b-middle: ${palette.shapeBMiddle};
-        --shape-b-end: ${palette.shapeBEnd};
-        --shape-c-start: ${palette.shapeCStart};
-        --shape-c-middle: ${palette.shapeCMiddle};
-        --shape-c-end: ${palette.shapeCEnd};
-        --shape-d-start: ${palette.shapeDStart};
-        --shape-d-middle: ${palette.shapeDMiddle};
-        --shape-d-end: ${palette.shapeDEnd};
-        --blob-a-opacity: ${blobAOpacity};
-        --blob-b-opacity: ${blobBOpacity};
-        --animation-rotation-speed-base: ${1 / (animationSpeedBase * 0.5)}s;
-        --animation-hue-speed-base: ${1 / (animationSpeedHue * 0.5)}s;
-        --hue-rotation: ${hueRotation}deg;
-        --main-hue-animation: ${
-          mainOrbHueAnimation
-            ? "hueShift var(--animation-hue-speed-base) linear infinite"
-            : "none"
-        };
-      }
-    `;
-
-    // Create or update the style element
-    let styleElement = document.getElementById(styleId) as HTMLStyleElement;
-    if (!styleElement) {
-      styleElement = document.createElement('style');
-      styleElement.id = styleId;
-      document.head.appendChild(styleElement);
-    }
-    styleElement.textContent = cssText;
-
-    // Clean up on unmount
-    return () => {
-      const element = document.getElementById(styleId);
-      if (element) {
-        element.parentNode?.removeChild(element);
-      }
-    };
-  }, [
-    orbId,
-    styleId,
-    size,
-    palette,
-    animationSpeedBase,
-    animationSpeedHue,
-    hueRotation,
-    mainOrbHueAnimation,
-    blobAOpacity,
-    blobBOpacity,
-    noShadow,
-  ]);
+  // Combine all classes
+  const rootClasses = [
+    "orb-root",
+    sizeClass,
+    speedBaseClass,
+    speedHueClass,
+    hueRotationClass,
+    blobAOpacityClass,
+    blobBOpacityClass,
+    paletteClass,
+    hueAnimationClass,
+    shadowClass
+  ].filter(Boolean).join(" ");
 
   return (
-    <div className={`orb-root ${orbId.current}`}>
+    <div className={rootClasses}>
       <div className="orb-main">
         <div className="glass loc-glass" />
         <div className="shape-a loc-a" />
         <div className="shape-b loc-b" />
         <div className="shape-c loc-c" />
         <div className="shape-d loc-d" />
-        <SvgElements color1={palette.mainBgStart} color2={palette.mainBgEnd} />
+        <SvgElementsCSP paletteClass={paletteClass} />
       </div>
     </div>
   );
